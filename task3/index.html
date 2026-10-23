@@ -1,3 +1,49 @@
-<!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Лабораторная 3: Меньше шума. Больше дела.. Пальцев Вячеслав, группа 11."><title>Меньше шума. Больше дела. · Практикум</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body><header class="topbar"><a href="../">ВП / Практикум</a><span>Работа 03 · 2026</span></header><main><p class="eyebrow">Личный фокус / Todo</p><h1>Меньше шума.<br>Больше дела.</h1><p class="lead">Соберите мысли в список и двигайтесь по одной задаче.</p><section class="panel" aria-label="Список задач"><form id="todo-form" novalidate><label for="task-input">Новая задача</label><input id="task-input" type="text" maxlength="500" placeholder="Что нужно сделать?" autocomplete="off" aria-describedby="error"><button>Добавить</button></form><p id="error" class="error" role="alert"></p><nav class="filters" aria-label="Фильтр задач"><button type="button" data-filter="all" aria-pressed="true">Все</button><button type="button" data-filter="active" aria-pressed="false">Активные</button><button type="button" data-filter="completed" aria-pressed="false">Завершённые</button></nav><p id="stats" class="stats" aria-live="polite"></p><ul id="tasks" class="list"></ul><p id="empty" class="empty">Пока пусто. Добавьте первую задачу.</p></section></main><footer class="page-footer">Пальцев Вячеслав Витальевич · Группа 11 <a href="https://github.com/sunspal2025/web-course-2026">Исходный код ↗</a></footer></body></html>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Лабораторная 3: Меньше шума. Больше дела.. Пальцев Вячеслав, группа 11."
+    />
+    <title>Меньше шума. Больше дела. · Практикум</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar"><a href="../">ВП / Практикум</a><span>Работа 03 · 2026</span></header>
+    <main>
+      <p class="eyebrow">Личный фокус / Todo</p>
+      <h1>Меньше шума.<br />Больше дела.</h1>
+      <p class="lead">Соберите мысли в список и двигайтесь по одной задаче.</p>
+      <section class="panel" aria-label="Список задач">
+        <form id="todo-form" novalidate>
+          <label for="task-input">Новая задача</label
+          ><input
+            id="task-input"
+            type="text"
+            maxlength="500"
+            placeholder="Что нужно сделать?"
+            autocomplete="off"
+            aria-describedby="error"
+          /><button>Добавить</button>
+        </form>
+        <p id="error" class="error" role="alert"></p>
+        <nav class="filters" aria-label="Фильтр задач">
+          <button type="button" data-filter="all" aria-pressed="true">Все</button
+          ><button type="button" data-filter="active" aria-pressed="false">Активные</button
+          ><button type="button" data-filter="completed" aria-pressed="false">Завершённые</button>
+        </nav>
+        <p id="stats" class="stats" aria-live="polite"></p>
+        <ul id="tasks" class="list"></ul>
+        <p id="empty" class="empty">Пока пусто. Добавьте первую задачу.</p>
+      </section>
+    </main>
+    <footer class="page-footer">
+      Пальцев Вячеслав Витальевич · Группа 11
+      <a href="https://github.com/sunspal2025/web-course-2026">Исходный код ↗</a>
+    </footer>
+  </body>
+</html>
