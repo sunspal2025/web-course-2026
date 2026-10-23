@@ -1,1 +1,1 @@
-export default {reactStrictMode:true, poweredByHeader:false};
+export default { reactStrictMode: true, poweredByHeader: false };

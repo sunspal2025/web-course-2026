@@ -1,2 +1,13 @@
-export const money = value => new Intl.NumberFormat('ru-RU',{style:'currency',currency:'RUB'}).format(value);
-export function totals(items) { const income = items.filter(i => i.type === 'income').reduce((sum,i) => sum + Math.round(i.amount * 100),0)/100; const expense = items.filter(i => i.type === 'expense').reduce((sum,i) => sum + Math.round(i.amount * 100),0)/100; return {income,expense,balance:income-expense}; }
+export const money = (value) =>
+  new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format(value);
+export function totals(items) {
+  const income =
+    items
+      .filter((i) => i.type === 'income')
+      .reduce((sum, i) => sum + Math.round(i.amount * 100), 0) / 100;
+  const expense =
+    items
+      .filter((i) => i.type === 'expense')
+      .reduce((sum, i) => sum + Math.round(i.amount * 100), 0) / 100;
+  return { income, expense, balance: income - expense };
+}
