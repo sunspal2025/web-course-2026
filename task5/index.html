@@ -1,3 +1,61 @@
-<!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Лабораторная 5: Simon / Память в цвете. Пальцев Вячеслав, группа 11."><title>Simon / Память в цвете · Практикум</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body><header class="topbar"><a href="../">ВП / Практикум</a><span>Работа 05 · 2026</span></header><main><p class="eyebrow">Память / Ритм / Внимание</p><h1>Запомните.<br>Повторите.</h1><p class="lead">Следите за подсветкой четырёх секторов, затем повторите порядок. В каждом раунде последовательность становится длиннее на один шаг.</p><section class="panel"><div class="row"><button id="start" type="button">Старт</button><label class="sound-label"><input id="sound" type="checkbox">Звук</label><p id="level" class="stats">Уровень: 0</p></div><p id="status" role="status" aria-live="polite">Нажмите «Старт», когда будете готовы.</p><div class="board" aria-label="Игровое поле"><button class="pad green" type="button" data-pad="0" disabled aria-label="Зелёный сектор">1</button><button class="pad blue" type="button" data-pad="1" disabled aria-label="Синий сектор">2</button><button class="pad orange" type="button" data-pad="2" disabled aria-label="Оранжевый сектор">3</button><button class="pad purple" type="button" data-pad="3" disabled aria-label="Фиолетовый сектор">4</button></div></section></main><footer class="page-footer">Пальцев Вячеслав Витальевич · Группа 11 <a href="https://github.com/sunspal2025/web-course-2026">Исходный код ↗</a></footer></body></html>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Лабораторная 5: Simon / Память в цвете. Пальцев Вячеслав, группа 11."
+    />
+    <title>Simon / Память в цвете · Практикум</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar"><a href="../">ВП / Практикум</a><span>Работа 05 · 2026</span></header>
+    <main>
+      <p class="eyebrow">Память / Ритм / Внимание</p>
+      <h1>Запомните.<br />Повторите.</h1>
+      <p class="lead">
+        Следите за подсветкой четырёх секторов, затем повторите порядок. В каждом раунде
+        последовательность становится длиннее на один шаг.
+      </p>
+      <section class="panel">
+        <div class="row">
+          <button id="start" type="button">Старт</button
+          ><label class="sound-label"><input id="sound" type="checkbox" />Звук</label>
+          <p id="level" class="stats">Уровень: 0</p>
+        </div>
+        <p id="status" role="status" aria-live="polite">Нажмите «Старт», когда будете готовы.</p>
+        <div class="board" aria-label="Игровое поле">
+          <button class="pad green" type="button" data-pad="0" disabled aria-label="Зелёный сектор">
+            1</button
+          ><button class="pad blue" type="button" data-pad="1" disabled aria-label="Синий сектор">
+            2</button
+          ><button
+            class="pad orange"
+            type="button"
+            data-pad="2"
+            disabled
+            aria-label="Оранжевый сектор"
+          >
+            3</button
+          ><button
+            class="pad purple"
+            type="button"
+            data-pad="3"
+            disabled
+            aria-label="Фиолетовый сектор"
+          >
+            4
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      Пальцев Вячеслав Витальевич · Группа 11
+      <a href="https://github.com/sunspal2025/web-course-2026">Исходный код ↗</a>
+    </footer>
+  </body>
+</html>
