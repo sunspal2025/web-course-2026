@@ -12,7 +12,8 @@
   "scripts": {
     "test": "npm test --workspace=task14",
     "build": "npm run build --workspace=task10 && npm run build --workspace=task11 && npm run build --workspace=task12 && npm run build --workspace=task15",
-    "serve": "python3 -m http.server 8080 --bind 127.0.0.1"
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
+    "publish:static": "npm run build --workspace=task10 && npm run build --workspace=task11 && npm run build --workspace=task15 && node scripts/publish-static.mjs"
   },
   "engines": {
     "node": ">=22.12.0"
