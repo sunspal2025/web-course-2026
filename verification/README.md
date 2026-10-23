@@ -27,4 +27,8 @@ python3 -m venv /tmp/course-browser-env
 
 ## Сборки
 
-`npm run build` собирает оба React-приложения, Next.js и Angular. `npm run publish:static` обновляет сборки React/Angular в published/ для GitHub Pages. Локальный json-server не публикуется на Pages; Vercel-деплой Next.js требует подключения аккаунта владельца.
+`npm run build` собирает оба React-приложения, Next.js и Angular. `npm run publish:static` обновляет сборки React/Angular в published/ для GitHub Pages. Локальный json-server не публикуется на Pages; Первый Vercel-деплой Next.js подтверждён владельцем и статусом GitHub.
+
+## Проверка после редизайна
+
+redesign_browser.py проверяет девять страниц на ширинах 320/375/768/1024/1440, данные профиля и загрузку портрета, светлую/тёмную палитры, контраст основной кнопки и reduced motion. Результаты — в redesign-results.txt.
