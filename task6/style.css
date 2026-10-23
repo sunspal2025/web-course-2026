@@ -6,7 +6,7 @@ canvas {
   border: 1px solid var(--line);
   border-radius: 18px;
   margin: 28px auto;
-  box-shadow: 0 4px 16px #00000004;
+  box-shadow: none;
 }
 .direction-controls {
   display: flex;
