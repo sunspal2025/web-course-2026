@@ -1,0 +1,109 @@
+/* Motion is progressive: unsupported features leave normal navigation and visible content. */
+:root {
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 180ms;
+  --motion-enter: 440ms;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+:target {
+  scroll-margin-top: 24px;
+}
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root) {
+  animation-duration: 140ms;
+  animation-timing-function: ease-out;
+}
+::view-transition-new(root) {
+  animation-duration: 200ms;
+  animation-timing-function: ease-out;
+}
+@keyframes page-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes detail-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+main,
+.route-content {
+  animation: page-arrive var(--motion-enter) var(--motion-ease) both;
+}
+.route-content main {
+  animation: none;
+}
+a,
+button,
+input,
+textarea,
+select,
+summary {
+  transition-property: color, background-color, border-color, opacity, transform;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: ease-out;
+}
+button:active,
+.primary-link:active,
+.button-link:active,
+.cta:active {
+  transform: scale(0.97);
+}
+button:disabled:active {
+  transform: none;
+}
+.completed .text {
+  transition: opacity var(--motion-fast) ease-out;
+}
+.mobile-menu summary span {
+  transition:
+    transform 220ms var(--motion-ease),
+    opacity 160ms ease-out;
+}
+.mobile-menu[open] summary span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu[open] summary span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-menu[open] summary span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.mobile-menu[open] > a {
+  animation: detail-arrive 220ms var(--motion-ease) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0.01ms;
+    --motion-enter: 0.01ms;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  @view-transition {
+    navigation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
