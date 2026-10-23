@@ -44,7 +44,7 @@ with sync_playwright() as p:
  for i in range(3):page.locator('#start').click();page.wait_for_timeout(80)
  page.wait_for_timeout(1500);expect(page.locator('#level')).to_have_text('Уровень: 1');assert page.evaluate('sequence.length')==1;ok('task5: показ, ввод, рост раунда, ошибка и отмена таймеров при быстрых рестартах')
  page.goto(f'{base}/task6/');page.locator('#pause').click();assert page.evaluate('snake.length')==3
- page.evaluate('paused=false; apple={x:6,y:10}; update(); paused=true;');assert page.evaluate('snake.length')==4;assert page.evaluate('score')==1
+ page.evaluate('snake=[{x:5,y:10},{x:4,y:10},{x:3,y:10}];direction=directions.right;pendingDirection=direction;score=0;paused=false;apple={x:6,y:10};update();paused=true;');assert page.evaluate('snake.length')==4;assert page.evaluate('score')==1
  assert page.evaluate('!snake.some(s=>s.x===apple.x&&s.y===apple.y)')
  page.evaluate('paused=false; turnQueued=false; changeDirection("left");');assert page.evaluate('pendingDirection.x')==1
  page.evaluate('snake=[{x:19,y:5},{x:18,y:5},{x:17,y:5}]; direction=directions.right; pendingDirection=direction; update();');assert page.evaluate('gameOver');expect(page.locator('#status')).to_contain_text('Игра окончена')
@@ -59,7 +59,7 @@ with sync_playwright() as p:
  before=len(requests);page.locator('#search').fill('POST 1');page.wait_for_timeout(400);assert all('post 1' in t.lower() for t in page.locator('#posts h2').all_text_contents());assert len(requests)==before
  page.locator('#search').fill('');page.wait_for_timeout(350)
  for i in range(20):
-  page.evaluate('window.scrollTo(0,document.body.scrollHeight)');page.wait_for_timeout(200)
+  page.evaluate('window.scrollTo({top:document.body.scrollHeight,behavior:"instant"})');page.wait_for_timeout(200)
   if page.locator('#posts article').count()==100:break
  expect(page.locator('#posts article')).to_have_count(100);expect(page.locator('#status')).to_have_text('Больше постов нет');assert len(requests)==10
  page.unroute('https://jsonplaceholder.typicode.com/posts?*',posts_route);page.route('https://jsonplaceholder.typicode.com/posts?*',lambda route:route.fulfill(status=500,json={'error':'test'}));page.goto(f'{base}/task7/');expect(page.locator('#retry')).to_be_visible();expect(page.locator('#status')).to_contain_text('Не удалось')

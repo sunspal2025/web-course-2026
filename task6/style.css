@@ -27,3 +27,11 @@ canvas {
   background: var(--accent-soft);
   color: var(--accent);
 }
+
+/* The running game is immediately available; only introductory copy enters softly. */
+main {
+  animation: none;
+}
+main > :is(.eyebrow, h1, .lead) {
+  animation: page-arrive 300ms var(--motion-ease) both;
+}
