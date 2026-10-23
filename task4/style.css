@@ -1,2 +1,5 @@
-@import url("../design-system.css");
-#guess { letter-spacing: .15em; font-variant-numeric: tabular-nums; }
+@import url('../design-system.css');
+#guess {
+  letter-spacing: 0.15em;
+  font-variant-numeric: tabular-nums;
+}

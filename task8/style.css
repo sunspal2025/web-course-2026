@@ -1,18 +1,72 @@
-@import url("../design-system.css");
+@import url('../design-system.css');
 
-.summary { display: grid; grid-template-columns: repeat(auto-fit,minmax(190px,1fr)); gap: 16px; }
-.summary .panel { padding: 26px; }
-.summary h2 { font-size: 12px; letter-spacing: .04em; color: var(--muted); font-weight: 500; }
-.summary p { font-size: 30px; margin: 16px 0 0; letter-spacing: -.04em; font-weight: 650; font-variant-numeric: tabular-nums; }
-#transaction-form { align-items: stretch; }
-#transaction-form label { flex: 1 1 160px; }
-.wide { flex-basis: 100%; }
-#filters { align-items: flex-end; }
-#filters label { flex: 1 1 130px; }
-.transaction-form { flex-direction: column; align-items: stretch; }
-a[aria-current="page"] { color: var(--accent); }
-.connection-state h2 { font-size: 24px; margin-top: 0; }
-.connection-state > p:not(.error) { color: var(--muted); }
-.connection-state details { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
-.connection-state summary { cursor: pointer; font-size: 14px; }
-.connection-state code { display: block; white-space: pre-wrap; overflow-wrap: anywhere; background: var(--subtle); padding: 14px; border-radius: 12px; font-size: 12px; line-height: 1.8; margin: 12px 0; }
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+.summary .panel {
+  padding: 26px;
+}
+.summary h2 {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-weight: 500;
+}
+.summary p {
+  font-size: 30px;
+  margin: 16px 0 0;
+  letter-spacing: -0.04em;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+#transaction-form {
+  align-items: stretch;
+}
+#transaction-form label {
+  flex: 1 1 160px;
+}
+.wide {
+  flex-basis: 100%;
+}
+#filters {
+  align-items: flex-end;
+}
+#filters label {
+  flex: 1 1 130px;
+}
+.transaction-form {
+  flex-direction: column;
+  align-items: stretch;
+}
+a[aria-current='page'] {
+  color: var(--accent);
+}
+.connection-state h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+.connection-state > p:not(.error) {
+  color: var(--muted);
+}
+.connection-state details {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.connection-state summary {
+  cursor: pointer;
+  font-size: 14px;
+}
+.connection-state code {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: var(--subtle);
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 12px 0;
+}

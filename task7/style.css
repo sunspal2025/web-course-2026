@@ -1,2 +1,16 @@
-@import url("../design-system.css");
-.posts { display: flex; flex-direction: column; gap: 0; } .posts article { overflow-wrap: anywhere; } .posts h2 { line-height: 1.4; font-size: 25px; } #sentinel { height: 1px; }
+@import url('../design-system.css');
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.posts article {
+  overflow-wrap: anywhere;
+}
+.posts h2 {
+  line-height: 1.4;
+  font-size: 25px;
+}
+#sentinel {
+  height: 1px;
+}

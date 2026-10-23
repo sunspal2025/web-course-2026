@@ -1,5 +1,29 @@
-@import url("../design-system.css");
-canvas { display: block; width: min(100%,400px); height: auto; border: 1px solid var(--line); border-radius: 18px; margin: 28px auto; box-shadow: 0 4px 16px #00000004; }
-.direction-controls { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-.direction-controls button { width: 52px; height: 52px; border-radius: 16px; font-size: 24px; background: var(--subtle); color: var(--text); border: 1px solid var(--line); }
-.direction-controls button:hover { background: var(--accent-soft); color: var(--accent); }
+@import url('../design-system.css');
+canvas {
+  display: block;
+  width: min(100%, 400px);
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  margin: 28px auto;
+  box-shadow: 0 4px 16px #00000004;
+}
+.direction-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.direction-controls button {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  font-size: 24px;
+  background: var(--subtle);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+.direction-controls button:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
