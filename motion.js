@@ -17,10 +17,12 @@
       return;
     observer = new IntersectionObserver(
       (entries) => {
+        if (preference.matches) return;
         entries.forEach((entry) => {
           if (!entry.isIntersecting || seen.has(entry.target)) return;
           seen.add(entry.target);
           observer.unobserve(entry.target);
+          if (entry.target.contains(document.activeElement)) return;
           const animation = entry.target.animate(
             [
               { opacity: 0, transform: 'translateY(18px)' },

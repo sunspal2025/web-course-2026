@@ -49,23 +49,15 @@ main,
 .route-content main {
   animation: none;
 }
-a,
-button,
-input,
-textarea,
-select,
-summary {
+:root :is(a, button, input, textarea, select, summary) {
   transition-property: color, background-color, border-color, opacity, transform;
   transition-duration: var(--motion-fast);
   transition-timing-function: ease-out;
 }
-button:active,
-.primary-link:active,
-.button-link:active,
-.cta:active {
+:root :is(button, .primary-link, .button-link, .cta):active {
   transform: scale(0.97);
 }
-button:disabled:active {
+:root button:disabled:active {
   transform: none;
 }
 .completed .text {

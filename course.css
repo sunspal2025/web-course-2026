@@ -302,3 +302,40 @@
     grid-column: 1 / -1;
   }
 }
+
+/* Interaction depth comes from movement, without adding shadows to the gallery. */
+.work {
+  overflow: clip;
+}
+.work-preview {
+  transition: transform 420ms var(--motion-ease);
+}
+.work-bottom span {
+  display: inline-block;
+  transition: transform 220ms var(--motion-ease);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .work:hover .work-preview {
+    transform: translateY(-4px) scale(1.015);
+  }
+  .work:hover .work-bottom span {
+    transform: translateX(4px);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .intro > * {
+    animation: page-arrive 520ms var(--motion-ease) both;
+  }
+  .intro > :nth-child(2) {
+    animation-delay: 40ms;
+  }
+  .intro > :nth-child(3) {
+    animation-delay: 90ms;
+  }
+  .intro > :nth-child(4) {
+    animation-delay: 130ms;
+  }
+  .intro > :nth-child(5) {
+    animation-delay: 170ms;
+  }
+}
