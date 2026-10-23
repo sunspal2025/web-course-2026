@@ -1,0 +1,9 @@
+PASS scroll reveal plays once and leaves content fully visible
+PASS keyboard focus is not hidden by scroll reveal
+PASS changing Reduce Motion cancels running effects and smooth scrolling
+PASS anchor navigation, ordinary document links and browser Back work
+PASS CSS-only labs keep keyboard menu support and respect Reduce Motion
+PASS content and links remain usable with JavaScript disabled
+PASS Ctrl-click opens a new tab; prefetch stays same-origin and respects Save-Data
+PASS Next routes animate without reloading shared data; reduced motion works
+PASS no uncaught JavaScript errors
