@@ -1,5 +1,5 @@
 PASS: 9 pages at 5 widths, no horizontal scrolling
 PASS: light primary button contrast 5.57
-PASS: dark primary button contrast 7.46
+PASS: dark primary button contrast 5.57
 PASS: portrait, professional profile, project links and reduced motion
 PASS: Next.js explains its local API requirement

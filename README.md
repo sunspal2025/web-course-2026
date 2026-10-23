@@ -73,3 +73,5 @@ Next.js имеет серверный динамический маршрут и
 ## Обновлённый профиль и оформление
 
 Java-разработчик, сейчас Business Analyst в GP Solutions. На главной и в резюме используется фотография владельца. Дизайн всех работ объединён через design-system.css; [референс и принципы](DESIGN.md).
+
+Текущий визуальный референс: Apple из [VoltAgent/awesome-design-md](https://github.com/voltagent/awesome-design-md/tree/main/design-md/apple). Точный анализ и лицензия сохранены в references/apple/, адаптация описана в DESIGN.md.

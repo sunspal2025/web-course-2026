@@ -1,5 +1,6 @@
 """Visual regression checks: portfolio, portrait, shared controls, themes and widths."""
 import re
+import os
 from playwright.sync_api import sync_playwright, expect
 
 
@@ -22,6 +23,7 @@ with sync_playwright() as playwright:
         for path in paths:
             page.goto('http://127.0.0.1:8080/' + path)
             expect(page.locator('h1')).to_be_visible()
+            page.evaluate('document.fonts.ready')
             assert page.evaluate('document.documentElement.scrollWidth <= innerWidth'), (width, path)
     print('PASS: 9 pages at 5 widths, no horizontal scrolling')
     for appearance in ['light', 'dark']:
@@ -40,6 +42,14 @@ with sync_playwright() as playwright:
     duration = page.locator('.work').first.evaluate('el => getComputedStyle(el).transitionDuration')
     assert float(duration.split(',')[0].strip().removesuffix('s')) < .01
     assert page.locator('.work').count() == 17
+    assert page.locator('.work .work-preview').count() == 3
+    for preview in page.locator('.work-preview').all():
+        preview.scroll_into_view_if_needed()
+        page.wait_for_function('el => el.complete && el.naturalWidth > 0', arg=preview.element_handle())
+        assert preview.evaluate('el => ["task3/", "task6/", "task12/"].includes(el.closest("a").getAttribute("href"))')
+    tile = page.locator('.work').nth(1)
+    tile.hover()
+    assert tile.evaluate('el => getComputedStyle(el).color') == 'rgb(255, 255, 255)' 
     expect(page.locator('.role')).to_contain_text('GP Solutions')
     assert page.locator('.hero-portrait img').evaluate('el => el.complete && el.naturalWidth === 593')
     page.goto('http://127.0.0.1:8080/task1/')
@@ -48,7 +58,7 @@ with sync_playwright() as playwright:
     assert page.locator('img').get_attribute('src') == '../assets/vyacheslav-paltsev.png'
     print('PASS: portrait, professional profile, project links and reduced motion')
     page.route('http://localhost:3001/**', lambda route: route.abort())
-    page.goto('http://127.0.0.1:3000/')
+    page.goto(os.environ.get('COURSE_NEXT_URL', 'http://127.0.0.1:3000') + '/')
     expect(page.locator('.connection-state')).to_be_visible()
     page.screenshot(path='/tmp/redesign-next-offline.png', full_page=True)
     print('PASS: Next.js explains its local API requirement')
