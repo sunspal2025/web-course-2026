@@ -73,10 +73,19 @@ textarea {
   padding: 17px 24px;
 }
 .topbar {
-  width: 100%; max-width: none; margin: 0; min-height: 44px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  min-height: 44px;
   padding: 0 max(20px, calc((100% - 980px) / 2));
-  border: 0; border-radius: 0; background: #000; color: #fff;
-  font-size: 12px; font-weight: 400; gap: 12px; box-shadow: none;
+  border: 0;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  gap: 12px;
+  box-shadow: none;
 }
 .topbar a {
   text-decoration: none;
@@ -104,6 +113,7 @@ h2 {
   font-weight: 600;
 }
 h3 {
+  font-weight: 600;
   letter-spacing: -0.025em;
 }
 p {
@@ -394,13 +404,48 @@ input[type='checkbox'] {
   }
 }
 
-.topbar a { color: #fff; font-weight: 400; }
-.topbar span { color: #ccc; }
-.topbar a:hover { color: #fff; text-decoration: underline; }
-button, .button-link, .primary-link { border-radius: 9999px; font-weight: 400; }
-button.secondary { border-radius: 8px; }
-button:active, .button-link:active, .primary-link:active { transform: scale(.95); }
-button:disabled:active { transform: none; }
-input[type="search"] { border-radius: 9999px; }
-.eyebrow { color: var(--muted); font-weight: 600; text-transform: none; letter-spacing: -.01em; font-size: 14px; }
-.page-footer { background: var(--subtle); color: var(--muted); border: 0; padding: 40px 0; font-size: 12px; }
+.topbar a {
+  color: #fff;
+  font-weight: 400;
+}
+.topbar span {
+  color: #ccc;
+}
+.topbar a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+button,
+.button-link,
+.primary-link {
+  border-radius: 9999px;
+  font-weight: 400;
+}
+button.secondary {
+  border-radius: 8px;
+}
+button:active,
+.button-link:active,
+.primary-link:active {
+  transform: scale(0.95);
+}
+button:disabled:active {
+  transform: none;
+}
+input[type='search'] {
+  border-radius: 9999px;
+}
+.eyebrow {
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  font-size: 14px;
+}
+.page-footer {
+  background: var(--subtle);
+  color: var(--muted);
+  border: 0;
+  padding: 40px 0;
+  font-size: 12px;
+}

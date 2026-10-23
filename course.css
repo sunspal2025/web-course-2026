@@ -204,17 +204,19 @@
   border-radius: 0;
   box-shadow: none;
   background: #f5f5f7;
-  color: #1d1d1f;
+  --tile-ink: #1d1d1f;
+  color: var(--tile-ink);
   --tile-link: #0066cc;
 }
 .work:nth-child(4n + 2),
 .work:nth-child(4n + 3) {
   background: #272729;
-  color: #fff;
+  --tile-ink: #fff;
+  color: var(--tile-ink);
   --tile-link: #2997ff;
 }
 .work:hover {
-  color: inherit;
+  color: var(--tile-ink);
   box-shadow: none;
 }
 .work-top {
