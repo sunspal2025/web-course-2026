@@ -11,17 +11,6 @@ html {
 :target {
   scroll-margin-top: 24px;
 }
-@view-transition {
-  navigation: auto;
-}
-::view-transition-old(root) {
-  animation-duration: 140ms;
-  animation-timing-function: ease-out;
-}
-::view-transition-new(root) {
-  animation-duration: 200ms;
-  animation-timing-function: ease-out;
-}
 @keyframes page-arrive {
   from {
     opacity: 0;
@@ -87,12 +76,6 @@ main,
   }
   html {
     scroll-behavior: auto;
-  }
-  /* Keep the navigation opt-in stable; disabling it mid-transition aborts native promises. */
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) {
-    animation: none !important;
   }
   *,
   *::before,
