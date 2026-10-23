@@ -147,7 +147,7 @@ with sync_playwright() as playwright:
     app.emulate_media(reduced_motion='reduce')
     app.get_by_role('link', name='Операции', exact=True).click()
     expect(app.locator('.list li').first).to_be_visible()
-    assert app.locator('.route-content').evaluate('el => getComputedStyle(el).animationName') == 'none'
+    expect(app.locator('.route-content')).to_have_css('animation-name', 'none')
     passed('Next routes animate without reloading shared data; reduced motion works')
     assert not errors, errors
     passed('no uncaught JavaScript errors')
