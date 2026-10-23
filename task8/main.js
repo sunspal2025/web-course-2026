@@ -49,7 +49,7 @@ form.addEventListener('submit',async event => {
   event.preventDefault(); if (busy || !connected) return;
   const amount = Number(form.elements.amount.value), type = form.elements.type.value, categoryId = form.elements.categoryId.value, date = form.elements.date.value;
   const validCategory = categories.some(item => String(item.id) === categoryId && item.type === type);
-  const errors = {amount: !Number.isFinite(amount) || amount <= 0, categoryId: !validCategory, date: !date || !/^\d{4}-\d{2}-\d{2}$/.test(date)};
+  const errors = {amount: !Number.isFinite(amount) || Math.round(amount*100) <= 0, categoryId: !validCategory, date: !date || !/^\d{4}-\d{2}-\d{2}$/.test(date)};
   Object.entries(errors).forEach(([key,invalid]) => form.elements[key].setAttribute('aria-invalid',String(invalid)));
   if (Object.values(errors).some(Boolean)) { document.querySelector('#form-error').textContent = 'Укажите положительную сумму, категорию и дату.'; return; }
   document.querySelector('#form-error').textContent = ''; const data = {amount:Math.round(amount*100)/100,type,categoryId,date,comment:form.elements.comment.value.trim()};

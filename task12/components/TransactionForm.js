@@ -14,7 +14,7 @@ export default function TransactionForm() {
  async function submit(e) {
   e.preventDefault(); if (busy) return;
   const amount = Number(values.amount);
-  if (!Number.isFinite(amount) || amount <= 0 || !values.categoryId || !values.date) { setError('Укажите положительную сумму, категорию и дату.'); return; }
+  if (!Number.isFinite(amount) || Math.round(amount*100) <= 0 || !values.categoryId || !values.date) { setError('Укажите положительную сумму, категорию и дату.'); return; }
   if (!categories.some(c => String(c.id) === values.categoryId && c.type === values.type)) { setError('Категория должна соответствовать типу операции.'); return; }
   setBusy(true); setError('');
   try { await save({...values,amount:Math.round(amount*100)/100,comment:values.comment.trim()},id); router.push('/'); }
