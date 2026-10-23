@@ -66,12 +66,13 @@ with sync_playwright() as playwright:
     assert abs(page.locator('#projects').evaluate('el => el.getBoundingClientRect().top')) < 90
     page.locator('.work[href="task1/"]').click()
     page.wait_for_url('**/task1/')
+    page.emulate_media(reduced_motion='reduce')
     expect(page.locator('h1')).to_contain_text('Пальцев')
     page.go_back()
     expect(page.locator('.work')).to_have_count(17)
     page.wait_for_timeout(650)
     assert page.locator('main').evaluate('el => getComputedStyle(el).opacity') == '1'
-    passed('anchor navigation, ordinary document links and browser Back work')
+    passed('anchor links, Back and changing Reduce Motion during native navigation work')
 
     reduced = browser.new_page(reduced_motion='reduce', viewport={'width': 375, 'height': 850})
     reduced.add_init_script(instrument)
