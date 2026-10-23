@@ -1,3 +1,49 @@
-<!DOCTYPE html>
-<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Лабораторная 4: Быки и коровы. Пальцев Вячеслав, группа 11."><title>Быки и коровы · Практикум</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
-<body><header class="topbar"><a href="../">ВП / Практикум</a><span>Работа 04 · 2026</span></header><main><p class="eyebrow">Логика / 4 уникальные цифры</p><h1>Взломайте<br>числовой код.</h1><p class="lead">Бык — цифра на своём месте. Корова — цифра верная, но место другое. Первая цифра может быть нулём.</p><section class="panel"><form id="guess-form" novalidate><label for="guess">Ваш вариант</label><input id="guess" type="text" inputmode="numeric" autocomplete="off" placeholder="Например, 1234" aria-describedby="status"><button id="check">Проверить</button></form><p id="status" role="status" aria-live="polite"></p><p id="count" class="stats"></p><button id="new-game" type="button" class="secondary">Новая игра</button><h2>История попыток</h2><ol id="history" class="list"></ol><p id="empty" class="muted">Здесь появятся ваши предположения.</p></section></main><footer class="page-footer">Пальцев Вячеслав Витальевич · Группа 11 <a href="https://github.com/sunspal2025/web-course-2026">Исходный код ↗</a></footer></body></html>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Лабораторная 4: Быки и коровы. Пальцев Вячеслав, группа 11."
+    />
+    <title>Быки и коровы · Практикум</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar"><a href="../">ВП / Практикум</a><span>Работа 04 · 2026</span></header>
+    <main>
+      <p class="eyebrow">Логика / 4 уникальные цифры</p>
+      <h1>Взломайте<br />числовой код.</h1>
+      <p class="lead">
+        Бык — цифра на своём месте. Корова — цифра верная, но место другое. Первая цифра может быть
+        нулём.
+      </p>
+      <section class="panel">
+        <form id="guess-form" novalidate>
+          <label for="guess">Ваш вариант</label
+          ><input
+            id="guess"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            placeholder="Например, 1234"
+            aria-describedby="status"
+          /><button id="check">Проверить</button>
+        </form>
+        <p id="status" role="status" aria-live="polite"></p>
+        <p id="count" class="stats"></p>
+        <button id="new-game" type="button" class="secondary">Новая игра</button>
+        <h2>История попыток</h2>
+        <ol id="history" class="list"></ol>
+        <p id="empty" class="muted">Здесь появятся ваши предположения.</p>
+      </section>
+    </main>
+    <footer class="page-footer">
+      Пальцев Вячеслав Витальевич · Группа 11
+      <a href="https://github.com/sunspal2025/web-course-2026">Исходный код ↗</a>
+    </footer>
+  </body>
+</html>
