@@ -15,7 +15,7 @@ function render() {
   document.querySelector('#count').textContent = `Загружено: ${posts.length} · Показано: ${visible.length}`;
 }
 async function loadMore() {
-  if (loading || exhausted || failed) return;
+  if (loading || exhausted || failed || query) return;
   loading = true; status.textContent = 'Загрузка…'; document.querySelector('#retry').hidden = true;
   try {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=10`);
@@ -32,7 +32,7 @@ const observer = new IntersectionObserver(entries => { if (entries.some(entry =>
 observer.observe(sentinel);
 document.querySelector('#retry').addEventListener('click', () => { failed = false; loadMore(); });
 document.querySelector('#search').addEventListener('input', event => {
-  clearTimeout(debounce); debounce = setTimeout(() => { query = event.target.value.trim().toLocaleLowerCase(); render(); },300);
+  clearTimeout(debounce); debounce = setTimeout(() => { query = event.target.value.trim().toLocaleLowerCase(); render(); if (!query && sentinel.getBoundingClientRect().top < window.innerHeight + 200) loadMore(); },300);
 });
 window.addEventListener('pagehide', () => { observer.disconnect(); clearTimeout(debounce); });
 loadMore();
