@@ -88,6 +88,14 @@ with sync_playwright() as playwright:
     expect(reduced.locator('.mobile-menu')).to_have_attribute('open', '')
     expect(reduced.locator('.mobile-menu a').first).to_be_visible()
     passed('CSS-only labs keep keyboard menu support and respect Reduce Motion')
+    reduced.emulate_media(reduced_motion='no-preference')
+    reduced.goto(BASE + '/task2/')
+    reduced.locator('main').evaluate('async el => { await Promise.all(el.getAnimations().map(a => a.finished.catch(() => {}))); }')
+    reduced.locator('.manifesto').evaluate('el => window.scrollTo({top:el.getBoundingClientRect().top + scrollY - innerHeight + 100,behavior:"instant"})')
+    reduced.wait_for_timeout(100)
+    assert float(reduced.locator('.manifesto').evaluate('el => getComputedStyle(el).opacity')) >= .9
+    passed('CSS scroll effects keep section text readable if scrolling stops mid-entry')
+
 
     fallback = browser.new_page(java_script_enabled=False, reduced_motion='reduce')
     fallback.goto(BASE + '/')
