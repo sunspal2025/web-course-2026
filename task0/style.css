@@ -1,0 +1,2 @@
+@import url("../design-system.css");
+main.panel { margin: 80px auto; padding: clamp(28px,5vw,64px); } h1 { font-size: clamp(34px,5vw,58px); } .label { color: var(--accent); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; } .details { color: var(--muted); } main > a { display: inline-flex; align-items: center; min-height: 46px; margin-top: 12px; color: var(--accent); } main footer { color: var(--muted); border-top: 1px solid var(--line); margin-top: 32px; padding-top: 20px; font-size: 13px; }
