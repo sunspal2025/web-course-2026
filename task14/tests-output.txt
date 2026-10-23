@@ -1,0 +1,22 @@
+
+> test
+> npm test --workspace=task14
+
+
+> test
+> jest --runInBand && vitest run
+
+Test Suites: 1 passed, 1 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        0.313 s, estimated 1 s
+Ran all test suites.
+
+ RUN  v4.1.12 /home/gpuser/web-course-2026/task14
+
+
+ Test Files  2 passed (2)
+      Tests  14 passed (14)
+   Start at  23:16:28
+   Duration  1.98s (transform 137ms, setup 272ms, import 197ms, tests 796ms, environment 1.21s)
+
