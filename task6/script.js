@@ -60,9 +60,9 @@ function update() {
   document.querySelector('#score').textContent = `Счёт: ${score}`;
 }
 function draw() {
-  ctx.fillStyle = '#111b25';
+  ctx.fillStyle = '#f4f7fc';
   ctx.fillRect(0, 0, 400, 400);
-  ctx.strokeStyle = '#1d2a37';
+  ctx.strokeStyle = '#e2e8f1';
   ctx.lineWidth = 1;
   for (let i = 0; i <= size; i++) {
     ctx.beginPath();
@@ -75,13 +75,13 @@ function draw() {
     ctx.stroke();
   }
   if (apple) {
-    ctx.fillStyle = '#ff9b7f';
+    ctx.fillStyle = '#d95030';
     ctx.beginPath();
     ctx.arc(apple.x * cell + 10, apple.y * cell + 10, 7, 0, Math.PI * 2);
     ctx.fill();
   }
   snake.forEach((segment, index) => {
-    ctx.fillStyle = index === 0 ? '#dcffb9' : '#91c968';
+    ctx.fillStyle = index === 0 ? '#0066cc' : '#73a6d9';
     ctx.fillRect(segment.x * cell + 2, segment.y * cell + 2, cell - 4, cell - 4);
   });
 }
