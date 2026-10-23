@@ -9,3 +9,10 @@ build/
 Thumbs.db
 .idea/
 .vscode/
+.next/
+.angular/
+coverage/
+.vercel/
+*.tsbuildinfo
+playwright-report/
+test-results/

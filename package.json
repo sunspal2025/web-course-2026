@@ -1,0 +1,20 @@
+{
+  "name": "web-course-2026",
+  "private": true,
+  "workspaces": [
+    "task8",
+    "task10",
+    "task11",
+    "task12",
+    "task14",
+    "task15"
+  ],
+  "scripts": {
+    "test": "npm test --workspace=task14",
+    "build": "npm run build --workspace=task10 && npm run build --workspace=task11 && npm run build --workspace=task12 && npm run build --workspace=task15",
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
