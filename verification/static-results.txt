@@ -1,0 +1,15 @@
+PASS task1: загрузка HTML/CSS
+PASS task2: загрузка HTML/CSS
+PASS task3: загрузка HTML/CSS
+PASS task4: загрузка HTML/CSS
+PASS task5: загрузка HTML/CSS
+PASS task6: загрузка HTML/CSS
+PASS task7: загрузка HTML/CSS
+PASS task1: аватар, контакты, только Flexbox
+PASS task2: 7 ширин, меню, поля >=44px, без горизонтального скролла
+PASS task3: пустой ввод, кнопка/Enter, безопасный текст, фильтры, удаление, сброс
+PASS task4: валидация, победа, блокировка и новая игра
+PASS task5: показ, ввод, рост раунда, ошибка и отмена таймеров при быстрых рестартах
+PASS task6: рост, свободное яблоко, запрет разворота, стена, рестарт
+PASS task7: пагинация до 100, debounce, локальный поиск, остановка, HTTP-ошибка и повтор
+PASS task1–7: ошибок JavaScript нет
