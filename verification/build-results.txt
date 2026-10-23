@@ -13,9 +13,9 @@ rendering chunks...
 computing gzip size...
 dist/source.html                            0.45 kB │ gzip:  0.30 kB
 dist/assets/InterVariable-DiVDrmQJ.woff2  352.24 kB
-dist/assets/source-CA3r6GdW.css             8.36 kB │ gzip:  2.65 kB
-dist/assets/source-pV5BVSjB.js            225.69 kB │ gzip: 70.81 kB
-✓ built in 615ms
+dist/assets/source-BC8zsrtV.css             8.33 kB │ gzip:  2.64 kB
+dist/assets/source-ENGHbWni.js            225.69 kB │ gzip: 70.81 kB
+✓ built in 601ms
 
 > build
 > vite build
@@ -27,18 +27,18 @@ rendering chunks...
 computing gzip size...
 dist/source.html                            0.45 kB │ gzip:  0.30 kB
 dist/assets/InterVariable-DiVDrmQJ.woff2  352.24 kB
-dist/assets/source-CA3r6GdW.css             8.36 kB │ gzip:  2.65 kB
-dist/assets/source-D-lK7DzR.js            226.85 kB │ gzip: 71.24 kB
-✓ built in 592ms
+dist/assets/source-BC8zsrtV.css             8.33 kB │ gzip:  2.64 kB
+dist/assets/source-DwvZY6jp.js            226.85 kB │ gzip: 71.24 kB
+✓ built in 609ms
 
 > build
 > next build --webpack
 
 ▲ Next.js 16.4.3 (webpack)
-✓ Running next.config.mjs took 10ms
+✓ Running next.config.mjs took 12ms
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1300ms
+✓ Compiled successfully in 1003ms
   Running TypeScript ...
   Finished TypeScript in 1ms ...
   Collecting page data using 7 workers ...
@@ -46,7 +46,7 @@ dist/assets/source-D-lK7DzR.js            226.85 kB │ gzip: 71.24 kB
   Generating static pages using 7 workers (1/5) 
   Generating static pages using 7 workers (2/5) 
   Generating static pages using 7 workers (3/5) 
-✓ Generating static pages using 7 workers (5/5) in 428ms
+✓ Generating static pages using 7 workers (5/5) in 296ms
   Finalizing page optimization ...
   Collecting build traces ...
 
@@ -70,11 +70,11 @@ Route (app)
 Initial chunk files | Names         |  Raw size | Estimated transfer size
 main.js             | main          | 165.67 kB |                46.06 kB
 polyfills.js        | polyfills     |  34.59 kB |                11.33 kB
-styles.css          | styles        |   8.37 kB |                 2.25 kB
+styles.css          | styles        |   8.34 kB |                 2.25 kB
 
-                    | Initial total | 208.63 kB |                59.64 kB
+                    | Initial total | 208.59 kB |                59.64 kB
 
-Application bundle generation complete. [1.639 seconds]
+Application bundle generation complete. [1.315 seconds]
 
 Output location: /home/gpuser/web-course-2026/task15/dist/todo-angular
 
