@@ -1,0 +1,9 @@
+PASS 320px: layout, menu, controls >=44px
+PASS 375px: layout, menu, controls >=44px
+PASS 767px: layout, menu, controls >=44px
+PASS 768px: layout, menu, controls >=44px
+PASS 1199px: layout, menu, controls >=44px
+PASS 1200px: layout, menu, controls >=44px
+PASS 1440px: layout, menu, controls >=44px
+PASS professional profile, mailto, anchors, demo form, no JavaScript errors
+PASS updated catalogue title
