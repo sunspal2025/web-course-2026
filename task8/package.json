@@ -1,0 +1,12 @@
+{
+  "name": "zen-money-server",
+  "private": true,
+  "scripts": {
+    "server": "json-server --watch db.json --port 3001 --host 127.0.0.1",
+    "start": "http-server .. -p 8080 -c-1"
+  },
+  "devDependencies": {
+    "json-server": "0.17.4",
+    "http-server": "14.1.1"
+  }
+}

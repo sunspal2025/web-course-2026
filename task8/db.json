@@ -1,0 +1,37 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "amount": 65000,
+      "type": "income",
+      "categoryId": "2",
+      "date": "2026-10-01",
+      "comment": "Учебный пример: зарплата"
+    },
+    {
+      "id": 2,
+      "amount": 2400,
+      "type": "expense",
+      "categoryId": "1",
+      "date": "2026-10-02",
+      "comment": "Учебный пример: продукты"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Еда",
+      "type": "expense"
+    },
+    {
+      "id": 2,
+      "name": "Зарплата",
+      "type": "income"
+    },
+    {
+      "id": 3,
+      "name": "Транспорт",
+      "type": "expense"
+    }
+  ]
+}
