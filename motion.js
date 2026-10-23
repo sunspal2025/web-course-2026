@@ -43,6 +43,35 @@
       });
   }
 
+  // Fetch only a few same-origin HTML documents after deliberate hover or keyboard focus.
+  // Native links remain untouched; Save-Data disables this optional hint.
+  const prefetched = new Set();
+  function prefetchOnIntent(event) {
+    if (
+      navigator.connection?.saveData ||
+      prefetched.size >= 6 ||
+      !(event.target instanceof Element)
+    )
+      return;
+    const link = event.target.closest('a.work[href]');
+    if (!link || link.hasAttribute('download') || link.target === '_blank') return;
+    const url = new URL(link.href, location.href);
+    if (
+      url.origin !== location.origin ||
+      url.pathname === location.pathname ||
+      prefetched.has(url.href)
+    )
+      return;
+    prefetched.add(url.href);
+    const hint = document.createElement('link');
+    hint.rel = 'prefetch';
+    hint.as = 'document';
+    hint.href = url.href;
+    document.head.append(hint);
+  }
+  document.addEventListener('pointerover', prefetchOnIntent, { passive: true });
+  document.addEventListener('focusin', prefetchOnIntent);
+
   preference.addEventListener('change', observe);
   window.addEventListener('pagehide', stop);
   window.addEventListener('pageshow', (event) => {
