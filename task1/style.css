@@ -511,3 +511,19 @@ address a {
   min-height: 44px;
   overflow-wrap: anywhere;
 }
+
+/* Return to the catalog even when this page was opened directly. */
+.topbar .back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  text-decoration: none;
+}
+.topbar .back-link:hover {
+  background: #272729;
+  color: #fff;
+}
